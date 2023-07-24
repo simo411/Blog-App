@@ -1,7 +1,4 @@
-# Blog-App
-It is a website for blog created by React.js using hooks and MySql
-
-## My Awesome Blog App
+# My Awesome Blog App
 
 Welcome to My Awesome Blog App! This is a simple web application for creating and viewing blog posts. It allows users to register, login, and create their own blog posts as well as view existing blog posts.
 
