@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+  background-color: #1f1f1f;
+}
+
+.logo {
+  width: 250px; 
+  height: 150px; 
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.navbar h1 {
+  color: #414141;
+  font-weight: 600;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #f1356d;
+}
+
+
+.navbar .btn-dropdown {
+  background-color: #f1356d;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.navbar .btn-dropdown:hover {
+  background-color: #e0225f;
+}
+
+.dropdown-content {
+  position: relative;
+  right: 0;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 1;
+}
+
+
+
+.dropdown-content button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content button:hover {
+  background-color: #2a2a2a;
+}
+
+/* Content */
+.content {
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 25px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px #0d0d0d;
+  transition: box-shadow 0.2s;
+}
+
+.blog-preview:hover {
+  box-shadow: 0px 10px 18px rgba(255, 255, 255, 0.1);
+}
+
+.blog-preview h2 {
+  font-size: 24px;
+  color: #f1356d;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.blog-preview p {
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.blog-preview a {
+  text-decoration: none;
+}
+
+/* Blog details page */
+.blog-details h2 {
+  font-size: 24px;
+  color: #f1356d;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.blog-details div {
+  margin: 20px 0;
+}
+
+.blog-details p {
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.blog-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.blog-details button:hover {
+  background-color: #e0225f;
+}
+
+/* Create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.create button:hover {
+  background-color: #e0225f;
+}
+
+/* Preview section */
+.preview {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.preview h1 {
+  font-size: 30px;
+  color: #f1356d;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.preview h2 {
+  font-size: 24px;
+  color: #f1356d;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.preview p {
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.preview div {
+  margin: 20px 0;
+}
+
+/* Login and Register form styles */
+.login,
+.register {
+  max-width: 400px;
+  margin: auto auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1a1a1a;
+  transition: background-color 0.3s;
+}
+
+.login h2,
+.register h2 {
+  font-size: 24px;
+  color: #f1356d;
+  margin-bottom: 20px;
+}
+
+.login input,
+.register input,
+.login button,
+.register button {
+  width: 80%; 
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}
+
+.login input:focus,
+.register input:focus,
+.login button:focus,
+.register button:focus {
+  outline: none;
+  border-color: #f1356d;
+}
+
+.login button,
+.register button {
+  width: 50%;
+  background-color: #f1356d;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login button:hover,
+.register button:hover {
+  background-color: #e0225f;
+}
+
+.login p {
+  margin: 0;
+  padding: 8px;
+  font-size: 14px;
+  color: #f1356d;
+  text-align: center;
+}
+.login a {
+  text-decoration: none;
+  margin: 15%;
+  padding-top: 15px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+
+/* Additional styles for Register form */
+.register label {
+  text-align: left;
+  display: block;
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+/* Optional: Styling for error messages */
+.error-message {
+  color: #f1356d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+.btn-logout {
+  background-color: #f1356d;
+  color: #ffffff;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #c82333;
+}
+
+
+
+/* Profile component styles */
+.profile {
+  max-width: 480px; 
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profile-header h2 {
+  font-size: 24px;
+  color: #f1356d;
+  font-weight: 600;
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem; /* Adjust the size of the container (circle) */
+  height: 6rem; /* Adjust the size of the container (circle) */
+  background-color: #f1356d;
+  border-radius: 50%;
+}
+
+.user-icon {
+  font-size: 4rem; /* Adjust the size of the icon (40% smaller than the container) */
+  color: #fff;
+}
+
+.profile-details p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.red-alert {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.start {
+  padding-left: 15%;
+  padding-right: 10%;
+}
+
+
+.start h1{
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: lighter;
+}
+
+.start h3{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  padding-left: 45%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.start p{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 45%;
+}
+
+.start h3 {
+  opacity: 0; /* Start with opacity 0 to make the text invisible */
+  transform: translateX(-50px); /* Move the text 20px to the left */
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Add transition for opacity and transform */
+}
+.start p {
+  opacity: 0; /* Start with opacity 0 to make the text invisible */
+  transform: translateX(50px); /* Move the text 20px to the left */
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Add transition for opacity and transform */
+}
+
+
+.start.show-text h3,
+.start.show-text p {
+  opacity: 1; /* Change opacity to 1 to make the text visible */
+  transform: translateX(0); /* Move the text back to its original position */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.blogspot {
+  width: 600px;
+  height: 200px;
+}
+
+.start-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.get-started-button {
+  background-color: #f1356d;
+  color: #ffffff;
+  border: 0;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.get-started-button:hover {
+  background-color: #e0225f;
+}
