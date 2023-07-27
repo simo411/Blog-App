@@ -1,13 +1,13 @@
 const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
-const bodyParser = require('body-parser'); // Import body-parser
+const bodyParser = require('body-parser'); 
 const bcrypt = require('bcrypt');
 
 
 const app = express()
 app.use(cors());
-app.use(bodyParser.json()); // Add this line to use the JSON body parser
+app.use(bodyParser.json()); // JSON body parser
 
 
 const db = mysql.createConnection({
@@ -16,10 +16,9 @@ const db = mysql.createConnection({
     password: '',
     database: 'blog_storage'
 })
-app.get('/', (re, res) => {
-    return res.json("this is backend");
-})
 
+
+/* to fetch blogs */
 app.get(`/blogs`, (req, res) => {
     const sql = `SELECT * FROM blog_store`;
     db.query(sql, (err, data) => {
@@ -28,6 +27,7 @@ app.get(`/blogs`, (req, res) => {
     })
 })
 
+/* to fetch blogs by id */
 app.get('/blogs/:id', (req, res) => {
     const sid = req.params.id;
     const id = parseInt(sid);
@@ -41,11 +41,13 @@ app.get('/blogs/:id', (req, res) => {
     });
 });
 
+/* to insert data in blog_store */
 app.post('/blogs', (req, res) => {
-    const { title, body, author } = req.body;
-    const sql = 'INSERT INTO blog_store (title, body, author) VALUES (?, ?, ?)';
-    db.query(sql, [title, body, author], (err, result) => {
+    const { title, body, author, author_id } = req.body; // Update the destructuring to include author and author_id
+    const sql = 'INSERT INTO blog_store (title, body, author, author_id) VALUES (?, ?, ?, ?)'; // Update the SQL query to include author and author_id
+    db.query(sql, [title, body, author, author_id], (err, result) => {
         if (err) {
+            console.error(err); // Log the error for debugging purposes
             return res.status(500).json({ error: 'Failed to insert blog into the database' });
         }
         // The blog entry was successfully inserted, and the `result` object contains the information about the inserted row.
@@ -53,6 +55,7 @@ app.post('/blogs', (req, res) => {
     });
 });
 
+/* to delete blogs */
 app.delete('/blogs/:id', (req, res) => {
     const id = req.params.id;
     const sql = 'DELETE FROM blog_store WHERE id = ?';
@@ -88,14 +91,27 @@ app.use((err, req, res, next) => {
 });
 
 
+
 // Login endpoint
+app.get('/login/:username', (req, res) => {
+    const user = req.params.username;
+    db.query('SELECT * FROM members WHERE username = ?', [user], (err, result) => {
+        if (err) throw err;
+        if (result.length === 0) {
+            res.status(404).json({ error: 'Row not found' });
+        } else {
+            res.json(result[0]);
+        }
+    });
+});
+
+/* checking login information */
 app.post('/login', async (req, res) => {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
     try {
-        // Retrieve the user with the provided email from the database
-        const sql = 'SELECT * FROM members WHERE email = ?';
-        db.query(sql, [email], async (err, result) => {
+        const sql = 'SELECT * FROM members WHERE username = ?';
+        db.query(sql, [username], async (err, result) => {
             if (err) {
                 return res.status(500).json({ error: 'Failed to login' });
             }
