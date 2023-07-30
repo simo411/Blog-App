@@ -32,13 +32,17 @@ To run the app locally, follow these steps:
    npm install 
    ```
 3. Create a MySQL database named `blog_storage` and tables `blog_store` and `members` with cloumns ( id, title, body, author, author_id, posted_on ) and ( m_id, name, usernam, email, password ) respectively and author_id is foregn key in reference to m_id.
-4. In the `backend` folder, open the `server.js` file and update the 'db' object with your MySQL database credentials.
-5. Before starting the `server.js` install these:
+![blog_store](https://github.com/simo411/Blog-App/assets/59970989/ab3e8b43-dc67-425b-aa2a-c58624335181)
+![members_table](https://github.com/simo411/Blog-App/assets/59970989/60b8f970-1392-4874-a31d-e55ee2102850)
+
+
+5. In the `backend` folder, open the `server.js` file and update the 'db' object with your MySQL database credentials.
+6. Before starting the `server.js` install these:
    ```
    npm install express mysql cors nodemon
    npm install bcrypt
    ```
-6. Start the backend server by running the following command in the `backend` folder:
+7. Start the backend server by running the following command in the `backend` folder:
    ```
    npm start
    //or
@@ -61,6 +65,12 @@ To run the app locally, follow these steps:
 5. In the blog details page, you have the option to delete the blog post of your own if you dont' like it.
 6. You can also navigate to the "Create" page from the navigation bar to add new blog posts.
 7. You can view your profile details on profile page.
+
+### Images of website till now:
+![blogspot](https://github.com/simo411/Blog-App/assets/59970989/20c61823-3030-4adc-bb3b-bdce727632d8)
+![blog_list1](https://github.com/simo411/Blog-App/assets/59970989/3473ca7c-35eb-46d2-a7ce-eb878b0c0cde)
+![blog_list2](https://github.com/simo411/Blog-App/assets/59970989/d5cfc61f-a36c-4c56-8ac4-7bb16401a62d)
+![blog_details](https://github.com/simo411/Blog-App/assets/59970989/919a3bfc-9de2-456b-b854-994b5795862c)
 
 Enjoy using My Awesome Blog App! If you encounter any issues or have feedback, feel free to open an issue in the repository.
 This repo is still in progress so sorry for not having proper css or function. 
