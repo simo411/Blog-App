@@ -44,6 +44,9 @@ app.get('/blogs/:id', (req, res) => {
 /* to insert data in blog_store */
 app.post('/blogs', (req, res) => {
     const { title, body, author, author_id } = req.body; // Update the destructuring to include author and author_id
+    console.log('body',body)
+    // const parsedBody = JSON.parse(body);
+    // console.log('prasedBody',parsedBody)
     const sql = 'INSERT INTO blog_store (title, body, author, author_id) VALUES (?, ?, ?, ?)'; // Update the SQL query to include author and author_id
     db.query(sql, [title, body, author, author_id], (err, result) => {
         if (err) {
@@ -132,6 +135,22 @@ app.post('/login', async (req, res) => {
     } catch (err) {
         return res.status(500).json({ error: 'Failed to login' });
     }
+});
+
+// avatars for user
+app.post('/update-avatar/:userId', (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const { avatarNumber } = req.body;
+    // console.log('userid= ',userId,'   avtarno.= ',avatarNumber)
+
+    const sql = 'UPDATE members SET avatar = ? WHERE m_id = ?';
+    db.query(sql, [avatarNumber, userId], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Failed to update avatar selection' });
+        }
+        return res.json({ message: 'Avatar selection updated successfully' });
+    });
 });
 
 app.listen(8000, () => {
