@@ -1,10 +1,10 @@
 import { useHistory, useParams } from "react-router-dom";
-import useFetch from "./useFetch";
-import { AuthContext } from './AuthContext';
+import useFetch from "../useFetch";
+import { AuthContext } from '../context/AuthContext';
 import React, { useState, useEffect, useContext } from "react";
 
 const replaceNewlinesWithBreaks = (text) => {
-  return text.split("\r\n").map((paragraph, index) => (
+  return text.split("\n").map((paragraph, index) => (
     <React.Fragment key={index}>
       {index > 0 && <br />} {/* Added <br /> except for the first paragraph */}
       {paragraph}
@@ -59,7 +59,7 @@ const BlogDetails = () => {
         <article>
           <h2>{blog.title}</h2>
           <p>Written by {blog.author}</p>
-          <div>{replaceNewlinesWithBreaks(blog.body)}</div>
+          <div className="blog-body">{replaceNewlinesWithBreaks(blog.body)}</div>
           {mid === blog.author_id && (
             <button onClick={handleDelete}>Delete</button>
           )}

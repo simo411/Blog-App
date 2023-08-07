@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 const Navbar = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -41,15 +41,19 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {user ? (
-          <>
-      <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" className="logo" />
-      </>
-        ) : null}
+        <>
+        <div className='logo-container'>
+          <div className="logo">
+            Blogspot
+          </div>
+          </div>
+        </>
+      ) : null}
       <div className="links">
         {user ? (
           <>
             <Link to="/home">Home</Link>
-            <Link to="/create">New Blog</Link>
+            <Link to="/create">Write</Link>
             <button className="btn-dropdown" onClick={handleDropdownToggle}>
               {user.username}
             </button>

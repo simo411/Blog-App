@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 const Create = () => {
   const [title, setTitle] = useState('');
@@ -66,12 +66,6 @@ const Create = () => {
         ></textarea>
         <button>Add Blog</button>
       </form>
-      <div className="preview">
-        <h1>Preview</h1>
-        <h2>{title}</h2>
-        <p>Written by {name}</p>
-        <div>{body}</div>
-      </div>
     </div>
   );
 }
