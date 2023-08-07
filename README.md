@@ -32,8 +32,10 @@ To run the app locally, follow these steps:
    npm install 
    ```
 3. Create a MySQL database named `blog_storage` and tables `blog_store` and `members` with cloumns ( id, title, body, author, author_id, posted_on ) and ( m_id, name, usernam, email, password ) respectively and author_id is foregn key in reference to m_id.
-![blog_store](https://github.com/simo411/Blog-App/assets/59970989/ab3e8b43-dc67-425b-aa2a-c58624335181)
-![members_table](https://github.com/simo411/Blog-App/assets/59970989/60b8f970-1392-4874-a31d-e55ee2102850)
+![Screenshot from 2023-08-07 10-25-35](https://github.com/simo411/Blog-App/assets/59970989/99556b89-b512-4c9c-9464-0e3d308e1a1a)
+
+
+![Screenshot from 2023-08-07 10-26-28](https://github.com/simo411/Blog-App/assets/59970989/341ffcba-95d5-4aa3-993e-d676cf5db523)
 
 
 5. In the `backend` folder, open the `server.js` file and update the 'db' object with your MySQL database credentials.
@@ -66,14 +68,21 @@ To run the app locally, follow these steps:
 6. You can also navigate to the "Create" page from the navigation bar to add new blog posts.
 7. You can view your profile details on profile page.
 
-### Images of website till now:
-![blogspot](https://github.com/simo411/Blog-App/assets/59970989/20c61823-3030-4adc-bb3b-bdce727632d8)
-![blog_list1](https://github.com/simo411/Blog-App/assets/59970989/3473ca7c-35eb-46d2-a7ce-eb878b0c0cde)
-![blog_list2](https://github.com/simo411/Blog-App/assets/59970989/d5cfc61f-a36c-4c56-8ac4-7bb16401a62d)
-![blog_details](https://github.com/simo411/Blog-App/assets/59970989/919a3bfc-9de2-456b-b854-994b5795862c)
+### Images of the website:
+![Screenshot from 2023-08-07 10-46-35](https://github.com/simo411/Blog-App/assets/59970989/b6b3c825-a167-48d8-8a24-d3adb030d70d)
+![Screenshot from 2023-08-07 10-58-17](https://github.com/simo411/Blog-App/assets/59970989/8d873aeb-a968-4a0d-b5cf-c881ca4eef73)
+<br><br><br><br>
+
+![Screenshot from 2023-08-07 10-44-16](https://github.com/simo411/Blog-App/assets/59970989/8f1d921e-7467-4034-9eee-346c37ce958a)
+![Screenshot from 2023-08-07 10-46-05](https://github.com/simo411/Blog-App/assets/59970989/4be9edf8-f74c-4cdf-927a-58af82e883f9)
+<br><br><br><br>
+
+![Screenshot from 2023-08-07 10-43-47](https://github.com/simo411/Blog-App/assets/59970989/32dd4e64-de46-4abf-8442-3efb780ed442)
+![Screenshot from 2023-08-07 10-44-41](https://github.com/simo411/Blog-App/assets/59970989/1e3d419e-e8bb-452e-8b32-08b917fb7ee3)
+![Screenshot from 2023-08-07 10-44-59](https://github.com/simo411/Blog-App/assets/59970989/203aa87e-c2ff-4d8d-ab1c-67af4b73786f)
+
 
 Enjoy using My Awesome Blog App! If you encounter any issues or have feedback, feel free to open an issue in the repository.
-This repo is still in progress so sorry for not having proper css or function. 
 
 But hey still, 
 Happy blogging! 😄
