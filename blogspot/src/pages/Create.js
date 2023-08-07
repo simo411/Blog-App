@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 const Create = () => {
   const [title, setTitle] = useState('');

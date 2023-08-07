@@ -1,6 +1,6 @@
 import { useHistory, useParams } from "react-router-dom";
-import useFetch from "./useFetch";
-import { AuthContext } from './AuthContext';
+import useFetch from "../useFetch";
+import { AuthContext } from '../context/AuthContext';
 import React, { useState, useEffect, useContext } from "react";
 
 const replaceNewlinesWithBreaks = (text) => {

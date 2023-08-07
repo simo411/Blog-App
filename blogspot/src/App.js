@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
-import Navbar from './Navbar';
-import Home from './Home';
+import Navbar from './Components/Navbar';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Create from './Create';
-import BlogDetails from './BlogDetails';
-import NotFound from './NotFound';
-import Login from './Login';
-import Register from './Register';
-import { AuthProvider } from './AuthContext';
-import Start from './Start';
-import Profile from './Profile';
+import Create from './pages/Create';
+import BlogDetails from './pages/BlogDetails';
+import NotFound from './Components/NotFound';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import { AuthProvider } from './context/AuthContext';
+import Start from './pages/Start';
+import Profile from './pages/Profile';
 
 
 function App() {

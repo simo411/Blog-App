@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import './modal.css';
 import axios from 'axios';
-import { AuthContext } from "./AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 const Modal = ({ userId }) => {
     const [modal, setModal] = useState(false);

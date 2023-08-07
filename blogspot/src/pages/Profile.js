@@ -1,8 +1,8 @@
 // Profile.js
 import React, { useContext , useEffect, useState} from 'react';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../context/AuthContext';
 import { FaUser } from 'react-icons/fa';
-import Modal from './Modal';
+import Modal from '../Components/Modal';
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
