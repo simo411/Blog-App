@@ -44,11 +44,11 @@ const Modal = ({ userId }) => {
                         <h2>Choose Your Avatar</h2>
                         <p>
                             <div className="avatar">
-                                <img src="/images/1-user.jpg" alt="Female User" className="avatar-img" onClick={() => handleAvatarClick(1)} />
-                                <img src="/images/2-user.jpg" alt="Male User" className="avatar-img" onClick={() => handleAvatarClick(2)} />
-                                <img src="/images/3-user.jpg" alt="Boy User" className="avatar-img" onClick={() => handleAvatarClick(3)} />
-                                <img src="/images/4-user.jpg" alt="Female with Glasses User" className="avatar-img" onClick={() => handleAvatarClick(4)} />
-                                <img src="/images/5-user.jpg" alt="Female Profile User" className="avatar-img" onClick={() => handleAvatarClick(5)} />
+                                <img src={process.env.PUBLIC_URL +"/images/1-user.jpg"} alt="Female User" className="avatar-img" onClick={() => handleAvatarClick(1)} />
+                                <img src={process.env.PUBLIC_URL +"/images/2-user.jpg"} alt="Male User" className="avatar-img" onClick={() => handleAvatarClick(2)} />
+                                <img src={process.env.PUBLIC_URL +"/images/3-user.jpg"} alt="Boy User" className="avatar-img" onClick={() => handleAvatarClick(3)} />
+                                <img src={process.env.PUBLIC_URL +"/images/4-user.jpg"} alt="Female with Glasses User" className="avatar-img" onClick={() => handleAvatarClick(4)} />
+                                <img src={process.env.PUBLIC_URL +"/images/5-user.jpg"} alt="Female Profile User" className="avatar-img" onClick={() => handleAvatarClick(5)} />
                             </div>
                         </p>
                         <button className="close-modal" onClick={toggleModal}>

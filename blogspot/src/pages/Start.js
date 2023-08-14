@@ -12,7 +12,7 @@ const Start = () => {
   return (
     <div className={`start ${showText ? 'show-text' : ''}`}>
       <div className="image-container">
-        <img src="/images/blogspot.png" alt="blogspot" className="blogspot" />
+        <img src= {process.env.PUBLIC_URL +"/images/blogspot.png"} alt="blogspot" className="blogspot" />
       </div>
 
       <h1 >Welcome to Blogspot: Exploring the World Through Words </h1>

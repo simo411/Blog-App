@@ -18,7 +18,7 @@ const Profile = () => {
         <h2>Profile</h2>
         <div className="user-icon-container">
         {avatar !== null ? (
-            <img src={`/images/${avatar}-user.jpg`} alt="Avatar" className="avatar-icon" />
+            <img src={process.env.PUBLIC_URL +`/images/${avatar}-user.jpg`} alt="Avatar" className="avatar-icon" />
           ) : (
             <FaUser className="user-icon" />
           )}
